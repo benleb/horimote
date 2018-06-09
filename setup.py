@@ -1,13 +1,13 @@
 from setuptools import setup
 
-setup(name='einder',
-      version='0.3.1',
-      author='Auke Willem Oosterhoff',
-      author_email='auke@orangetux.nl',
-      description='API wrapper for Samsumgs set-top boxes SMT-G7400 and SMT-G7401.',  # NOQA
-      url='https://github.com/OrangeTux/einder',
+setup(name='horimote',
+      version='0.4',
+      author='Ben Lebherz & Auke Willem Oosterhoff',
+      author_email='b@benleb.de',
+      description='Async API wrapper for Samsumgs set-top boxes SMT-G7400 and SMT-G7401.',  # NOQA
+      url='https://github.com/benleb/horimote',
       packages=[
-        'einder'
+        'horimote'
       ],
       license='MIT',
       classifiers=[

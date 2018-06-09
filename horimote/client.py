@@ -1,10 +1,11 @@
+# coding=utf-8
 import socket
 import struct
 from logging import getLogger
 from http.client import HTTPConnection
 
-from einder import keys
-from einder.exceptions import AuthenticationError
+from horimote import keys
+from horimote.exceptions import AuthenticationError
 
 log = getLogger(__name__)
 

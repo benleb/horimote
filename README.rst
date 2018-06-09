@@ -1,9 +1,9 @@
 |Build Status| |PyPI|
 
-Einder
+Horimote
 ======
 
-Einder is an API wrapper for the set-top boxes SMT C7400 and SMT C7401.
+Horimote is an API wrapper for the set-top boxes SMT C7400 and SMT C7401.
 In the Netherlands these boxes are sold by a big Dutch cable operator
 under the name Horizon Box. The name Einder is a Dutch synonym for
 horizon.
@@ -17,14 +17,14 @@ Installation
 
 .. code:: shell
 
-    $ pip install einder
+    $ pip install horimote
 
 Usage
 -----
 
-``einder.Client`` controls the set-top box by sending bytes. These bytes
+``horimote.Client`` controls the set-top box by sending bytes. These bytes
 represent the buttons of a remote control. You can find all supported
-keys in `einder.keys <einder/keys.py>`__. The example shows how to
+keys in `horimote.keys <horimote/keys.py>`__. The example shows how to
 send keys.
 
 .. code:: python
@@ -32,8 +32,8 @@ send keys.
     import time
 
     import logging
-    from einder import Client
-    from einder import keys
+    from horimote import Client
+    from horimote import keys
 
     # Enable logging.
     logging.basicConfig(level=logging.DEBUG)
@@ -52,7 +52,7 @@ send keys.
     c.send_key(keys.NUM_0)
     c.send_key(keys.NUM_1)
 
-    # For selecting a channel einder.Client offers a small helper function.
+    # For selecting a channel horimote.Client offers a small helper function.
     c.select_channel(501)
 
     # No watch some TV...
@@ -60,11 +60,11 @@ send keys.
     c.power_off()
     c.disconnect()
 
-The ``einder.Client`` can also be used as a context manager:
+The ``horimote.Client`` can also be used as a context manager:
 
 .. code:: python
 
-    from einder import Client
+    from horimote import Client
 
     with Client("192.168.1.245") as c:
         c.select_channel(501)
@@ -74,7 +74,7 @@ License
 
 This software is licensed under the `MIT license <LICENSE>`__.
 
-.. |Build Status| image:: https://travis-ci.org/OrangeTux/einder.svg?branch=master
-   :target: https://travis-ci.org/OrangeTux/einder
-.. |PyPI| image:: https://img.shields.io/pypi/v/einder.svg
-   :target: https://pypi.python.org/pypi/einder/
+.. |Build Status| image:: https://travis-ci.org/OrangeTux/horimote.svg?branch=master
+   :target: https://travis-ci.org/OrangeTux/horimote
+.. |PyPI| image:: https://img.shields.io/pypi/v/horimote.svg
+   :target: https://pypi.python.org/pypi/horimote/

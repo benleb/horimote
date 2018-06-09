@@ -2,7 +2,7 @@ import pytest
 from threading import Thread
 from socketserver import BaseRequestHandler, TCPServer
 
-import einder
+import horimote
 
 
 class TestHandler(BaseRequestHandler):
@@ -43,12 +43,12 @@ def server(request):
 
 @pytest.yield_fixture
 def client(server):
-    """ Return einder.Client connected with server. """
+    """ Return horimote.Client connected with server. """
     host, port = server.socket.getsockname()
 
     # Mock out authorization for now. That makes testing easier.
-    einder.Client.authorize = lambda _: _
-    c = einder.Client(host, port)
+    horimote.Client.authorize = lambda _: _
+    c = horimote.Client(host, port)
 
     yield c
 

@@ -10,3 +10,4 @@ docs/build
 *.egg-info
 .eggs
 dist/
+.pytest_cache

@@ -5,7 +5,7 @@ lint:	## Run flake8.
 	@py.test --flake8
 
 test:   ## Run unit tests and print test coverage.
-	@py.test --cov-report term-missing --cov=einder -v tests/
+	@py.test --cov-report term-missing --cov=horimote -v tests/
 
 
 .PHONY: help lint test
