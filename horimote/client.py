@@ -99,10 +99,10 @@ class Client:
 
         :return: Boolean indicitation if device is powered on.
         """
-        host = '{0}:62137'.format(self.ip)
+        host = '{0}:29153'.format(self.ip)
         try:
             HTTPConnection(host, timeout=2).\
-                request('GET', '/DeviceDescription.xml')
+                request('GET', '/description1.xml')
         except (ConnectionRefusedError, socket.timeout):
             log.debug('Set-top box at %s:%s is powered off.',
                       self.ip, self.port)
