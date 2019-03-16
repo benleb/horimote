@@ -5,7 +5,9 @@ setup(
     version="0.4.1",
     author="Ben Lebherz & Auke Willem Oosterhoff",
     author_email="b@benleb.de",
-    description="Async API wrapper for Samsumgs set-top boxes SMT-G7400 and SMT-G7401.",  # NOQA
+    description="Async API wrapper for Samsumgs set-top boxes SMT-G7400 and SMT-G7401.",
+    long_description=open('README.md').read(),
+    long_description_content_type='text/markdown',
     url="https://github.com/benleb/horimote",
     packages=["horimote"],
     license="MIT",
