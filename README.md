@@ -3,21 +3,16 @@ Status](https://travis-ci.org/benleb/horimote.svg?branch=master)](https://travis
 [![PyPI](https://img.shields.io/pypi/v/horimote.svg)](https://pypi.python.org/pypi/horimote/)
 
 # Horimote
-
 Horimote is a simple Python library for the Horizon HD-Recorder sold by Unitymedia Germany.
 
 Thanks to [OrangeTux](https://github.com/OrangeTux) & [kuijp](https://github.com/kuijp) for their work on [einder](https://github.com/OrangeTux/einder) & [horizoncontrol](https://github.com/kuijp/horizoncontrol). This is just another Python fork focussing on the Horzion HD-Recorder from Unitymedia Germany.
 
 ## Installation
-============
-
 ```bash
 $ pip install horimote
 ```
 
 ## Usage
-=====
-
 `horimote.Client` controls the set-top box by sending bytes. These bytes
 represent the buttons of a remote control. You can find all supported
 keys in [horimote.keys](horimote/keys.py). The example shows how to send
